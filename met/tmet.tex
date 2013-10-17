@@ -1,0 +1,46 @@
+
+\input{various/decor}
+
+\newcounter{lr}
+\setcounter{lr}{1}
+
+\newcommand{\lr}[1]
+{
+	\mysection{Лабораторная работа № \thelr. \\ #1}
+	
+		\mysubsection{Цель работы}
+		\input{lab/\thelr/aim}
+
+		\mysubsection{Теоретическая часть}
+		\input{lab/\thelr/theory}
+		
+		\mysubsection{Практическая часть}
+		\input{lab/\thelr/practice}
+		
+%		\mysubsection{Требования к оформлению отчета по лабораторной работе}
+%		\input{lab/\thelr/req}
+
+		\clearpage
+
+	\addtocounter{lr}{1}
+}
+
+\begin{document}
+
+	\input{various/title}
+	\clearpage
+
+	\tableofcontents
+
+	\lr{Космические аппараты группировки Landsat. Получение данных, простейшая обработка}
+
+	\clearpage
+	\addcontentsline{toc}{section}{\hskip 16pt Библиография}
+	\bibliographystyle{gost780u}
+	\bibliography{various/biblio}
+
+	\clearpage
+	\input{various/stub}
+
+\end{document}
+
